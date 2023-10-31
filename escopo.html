@@ -1,0 +1,31 @@
+<!-- Insira o código JS (incorpore-o da forma como preferir) para:
+a) Declarar duas variáveis de escopo a nível de bloco.
+b) Atribuir valores – do tipo inteiro – a ambas as variáveis.
+c) Realizar uma operação matemática com as duas variáveis declaradas.
+d) Exibir o resultado da operação matemática no console (dentro do navegador, no inspecionador de elementos, aba console).
+-->
+
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Escopo de variáveis em JS</title>
+<script type="text/javascript">
+multiplicarValores();
+function multiplicarValores(){
+var num1 = 10; /*a e b*/
+var num2 = 3; /*a e b*/
+var resultado = num1 * num2; /*c*/ /**se ficar FORA do escopo da função (sem o var), então será impresso no console "Conteúdo da variável resultado fora da função: 30"*/
+console.log(resultado); /*d*/
+//A instrução acima imprimirá o resultado da operação matemática. Lembrando que
+// as variáveis num1, num2 e resultado só existem dentro da própria função.
+}
+console.log('Conteúdo da variável resultado fora da função: ' + resultado);
+//A instrução acima não conseguirá acessar o conteúdo da variável resultado,
+// uma vez que ela só existe dentro do escopo da função onde foi declarada.
+// A saída da instrução acima será: "resultado is not defined"
+</script>
+</head>
+<body>
+</body>
+</html>
